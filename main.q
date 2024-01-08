@@ -5,13 +5,14 @@ DEBUG_SKIP_CLS:0b;
 DEBUG_NO_AUTO_START:0b;
 
 FPS:2;            // Frames per second
-USE_ANSI_CLS:0b;  // Whether to use ANSI escape codes to clear the screen (Does not work in command prompt properly but should work in bash, etc.)
 
 currentScene:`game;
 lastInput:"";
 
 
 main:{[]
+  system"echo ...";  // For ANSI escape codes (See .common.cls) to work for Windows CMD a batch command needs to be executed at least once beforehand, otherwise the escape character is displayed as a backwards arrow and they have no effect when printing
+
   `.z.pi set readInput;  // Setting .z.pi to the custom input-reading function (Best to assign it inside a function like this so as not to affect .z.pi if debugging with DEBUG_NO_AUTO_START)
 
   startScene[currentScene;()!()];
