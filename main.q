@@ -1,4 +1,5 @@
 system"l common.q";
+system"l menu.q";
 system"l game.q";
 
 DEBUG_SKIP_CLS:0b;
@@ -6,7 +7,7 @@ DEBUG_NO_AUTO_START:0b;
 
 FPS:2;            // Frames per second
 
-currentScene:`game;
+currentScene:`menu;  // Modify this if wanting to start on a different level
 lastInput:"";
 
 
