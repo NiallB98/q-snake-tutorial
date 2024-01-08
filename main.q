@@ -57,7 +57,7 @@ process:{[input]  // Runs the process function for the current scene/level, pass
 
 draw:{[]         // Runs the draw function for the current scene/level
   value(`$".",string[currentScene],".draw";());
-  1"[qSnake] ";  // Drawing the standard prompt
+  1"[qSnake] ";  // Drawing the global prompt (Can remove this if you like or have the prompt be controlled by the current level's draw function nstead)
  };
 
 if[not DEBUG_NO_AUTO_START;main[]];
