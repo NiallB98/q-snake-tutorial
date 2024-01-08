@@ -20,7 +20,7 @@ main:{[]
   startGameLoop[FPS];
  };
 
-readInput:{[input]  // Function to replace .z.pi with once the main function executes. It reads the user's input, saves the last character to the lastInput variable and quits the game if special input is entered
+readInput:{[input]  // Function to replace .z.pi with once the main function executes. It reads the user's input, saves the last character inputted (in lowercase form) to the lastInput variable and quits the game if special input is entered
   input:input except "\n";
   
   $[
