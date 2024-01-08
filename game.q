@@ -7,7 +7,7 @@ GAME_GRID_STATES:`empty`snake`head`fruit`dead!0 1 2 3 4;            // Maps the 
 GAME_LEVEL:"\n" sv read0`:game.txt;                                 // The level's text file loaded in as a string with \n separating each line
 
 GAME_GRID_1D:(GAME_GRID_WIDTH*GAME_GRID_HEIGHT)#0;                  // The base game grid where index i = x + y * GAME_GRID_WIDTH
-GAME_GRID_VISUAL_INDICES:raze{x+til 20}each ss[GAME_LEVEL;20#" "];  // Each index/square in GAME_GRID_1D maps to 2 indices in the game level, which is why this is 20 characters wide rather than 10
+GAME_GRID_VISUAL_INDICES:raze{x+til 20}each ss[GAME_LEVEL;20#"$"];  // Each index/square in GAME_GRID_1D maps to 2 indices in the game level, which is why this is 20 characters wide rather than 10
 
 .game.snakePosList:`x`y!(enlist 4;enlist 2);                        // Dictionary mapping lists of x and y coordinates for the snake's body where the first x and y correspond to the snake's head
 .game.snakeDir:`x`y!(0 -1);                                         // Relative position of the next grid square the snake will move to where positive/negative x is right/left and positive/negative y is down/up
