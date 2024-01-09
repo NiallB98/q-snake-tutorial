@@ -80,6 +80,6 @@ MENU_OPTIONS:`play`quit;
 .menu.selectOption:{[option]
   // [Step 3]
   // Add logic so that:
-  // if option~`play -> the `game scene/level is started
+  // if option~`play -> the `game scene/level is started (Hint: there is a function to do this in main.q)
   // else if option~`quit -> execute .common.quitGame[]
  };
